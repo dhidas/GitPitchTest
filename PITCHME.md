@@ -18,36 +18,13 @@ An application architecture for React
 
 ```python
 s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
-s = "Python syntax highlighting"
 print s
+```
+
+
+---
+
+```python
+osr = oscars.sr.sr(gpu=1, nthreads=10)
+osr.add_bfield(123)
 ```
