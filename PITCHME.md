@@ -25,6 +25,9 @@ print s
 ---
 
 ```python
+for i in range(10):
+    print('bite me')
+
 osr = oscars.sr.sr(gpu=1, nthreads=10)
 osr.add_bfield(123)
 ```
