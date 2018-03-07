@@ -1,10 +1,11 @@
-# Flux 
+# oscars.bl
 
-An application architecture for React
+An OSCARS Beamline Tutorial
 
 ---
 
 ### Flux Design
+## Flux Design
 
 - Dispatcher: Manages Data Flow
 - Stores: Handle State & Logic
