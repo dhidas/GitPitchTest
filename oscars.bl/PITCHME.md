@@ -13,7 +13,7 @@ An OSCARS Beamline Tutorial
 
 ---
 
-![Flux Explained](https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png)
+![Flux Explained](assets/Test_EPU60_400eV.pdf)
 
 ---
 
