@@ -18,6 +18,7 @@ An OSCARS Beamline Tutorial
 ---
 
 
+
 ```python
 s = "Python syntax highlighting"
 print s
