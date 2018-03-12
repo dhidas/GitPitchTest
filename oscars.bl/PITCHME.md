@@ -13,7 +13,7 @@ An OSCARS Beamline Tutorial
 
 ---
 
-![Flux Explained](assets/image/Test_EPU60_400eV.pdf)
+![Flux Explained](assets/image/Test_EPU60_400eV.png)
 
 
 ---
