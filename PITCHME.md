@@ -31,10 +31,9 @@ for i in range(10):
 
 osr = oscars.sr.sr(gpu=1, nthreads=10)
 osr.add_bfield(123)
-
-$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 ```
 
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 
 ---
 
