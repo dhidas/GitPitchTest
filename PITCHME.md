@@ -1,5 +1,7 @@
 # TeX Test of gitpitch
 
+---
+
 Works:
 $$A_{n} = A_{n-2} + A_{1}$$
 
