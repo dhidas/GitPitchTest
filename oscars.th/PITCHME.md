@@ -40,4 +40,4 @@ $$
 \frac{d\Phi_n}{d\Omega} (0, 0, \omega_n, \hat u ) = \alpha \frac{I}{e} N^2 \gamma^2 | \hat u_x \hat u^* |^2 F_n(K)
 $$
 where
-$F_n(K) = \frac{n^2 K^2}{(1 + (K^2 / 2))^2} ( J\sb{x+y} )$
+$F_n(K) = \frac{n^2 K^2}{(1 + (K^2 / 2))^2} ( J_{x+y} )$
