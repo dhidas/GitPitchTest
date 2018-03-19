@@ -31,4 +31,8 @@ for i in range(10):
 
 osr = oscars.sr.sr(gpu=1, nthreads=10)
 osr.add_bfield(123)
+
+.. math::
+   K = \frac{e B_{max} \lambda_0}{2 \pi m c^2}
+
 ```
