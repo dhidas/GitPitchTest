@@ -33,7 +33,7 @@ from oscars.plots_mpl import *
 
 ---
 
-$$ J_{(n-1)/2} (\frac{n K^2}{4 + 2 K^2}) - J_{a + b} $$
+$$ J_{(n-1)/2} (\frac{n K^2}{4 + 2 K^2}) - J_{(a + b)} $$
 ---
 
 
