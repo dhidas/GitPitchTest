@@ -16,14 +16,15 @@ Information on the oscars.th module
 
 ## Properly setup with oscars.th
 - Import the module, setup a beam
+
 ```python
 import oscars.th
-
 oth = oscars.th.th(gpu=1, nthreads=8)
 oth.set_particle_beam(beam='NSLSII-ShortStraight')
 ```
 
-- Useful for plotting:
+- Useful for plotting
+
 ```python
 from oscars.plots_mpl import *
 ```
