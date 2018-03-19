@@ -34,6 +34,7 @@ from oscars.plots_mpl import *
 ---
 
 
+
 ### undulator_flux_onaxis()
 Calculates the on-axis undulator flux according to 
 $$
