@@ -37,7 +37,7 @@ from oscars.plots_mpl import *
 ### undulator_flux_onaxis()
 Calculates the on-axis undulator flux according to 
 $$
-\frac{d\Phi_n}{d\Omega} (0, 0, \omega_n, \hat{u}) = \alpha \frac{I}{e} N^2 \gamma^2 | \hat{u}_x \hat{u}^* |^2 F_n(K)
+\frac{d\Phi_n}{d\Omega} (0, 0, \omega_n, \hat (u)) = \alpha \frac{I}{e} N^2 \gamma^2 | \hat{u}_x \hat{u}^* |^2 F_n(K)
 $$
 where
 $$
