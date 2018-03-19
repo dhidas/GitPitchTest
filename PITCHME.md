@@ -4,7 +4,7 @@
 
 Works:
 
-$$ A_{n} = A_2 + A_1 $$
+$$ A_{n} = A_{2} + A_1 $$
 
 Does not work:
 
