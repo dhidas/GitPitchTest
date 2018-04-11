@@ -45,5 +45,5 @@ Calculates the on-axis undulator flux according to
 
 where
 `$$F_n(K) = \frac{n^2 K^2}{(1 + (K^2 / 2))^2} \times $$`
-`$$( J_{(n-1)/2}(\frac{nK^2}{4 + 2K^2}) - J_{(n+1)/2} (\frac{nK^2}{4 + 2K^2}))^2$$`
+`$$\large( J_{(n-1)/2}(\frac{nK^2}{4 + 2K^2}) - J_{(n+1)/2} (\frac{nK^2}{4 + 2K^2})\large)^2$$`
 
