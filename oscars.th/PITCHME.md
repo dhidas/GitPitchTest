@@ -33,13 +33,13 @@ from oscars.plots_mpl import *
 
 ---
 
-$$ J_{(n-1)/2} (\frac{n K^2}{4 + 2 K^2}) - J_{(a + b)} $$
+`$$ J_{(n-1)/2} (\frac{n K^2}{4 + 2 K^2}) - J_{(a + b)} $$`
 ---
 
 
 ### undulator_flux_onaxis()
 Calculates the on-axis undulator flux according to 
-$$ \frac{d\Phi\_n}{d\Omega} (0, 0, \omega\_n, \hat u ) = \alpha \frac{I}{e} N^2 \gamma^2 | \hat u\_x \hat u^* |^2 F\_n(K) $$
+$$ \frac{d\Phi_n}{d\Omega} (0, 0, \omega_n, \hat u ) = \alpha \frac{I}{e} N^2 \gamma^2 | \hat u_x \hat u^* |^2 F_n(K) $$
 
 ---
 
