@@ -19,6 +19,8 @@ An OSCARS Beamline Tutorial
 import oscars.bl
 obl = oscars.bl.bl(nthreads=10, gpu=1)
 ```
+
+```
 You can select from the available facility, beamline, and device list:
     Beamline     Device           Modes
     --------     ------           -----
@@ -31,7 +33,7 @@ NSLSII
     FMX          IVU21            planar
     SRX          IVU21            planar
     NYX          IVU18            planar
-
+```
 
 ---
 
