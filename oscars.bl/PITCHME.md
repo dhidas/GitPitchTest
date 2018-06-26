@@ -2,21 +2,22 @@
 
 An OSCARS Beamline Tutorial
 
-Website: [https://oscars.bnl.gov](https://oscars.bnl.gov)
-GitHub: [https://github.com/dhidas/OSCARS](https://github.com/dhidas/OSCARS)
-Email: [oscars@bnl.gov](mailto:oscars@bnl.gov)
-
 
 
 
 
 ---
 ### What is oscars.bl
-
+These slides contain information on the oscars.bl module:
 - ID Lookup Tables: Pre-computed and user defined LUTs
 - Easily plotting simple spectra, flux, power density
 - Access to magnetic field data
 - Access to all of OSCARS functionality
+
+Where to find more help:
+- Email: [oscars@bnl.gov](mailto:oscars@bnl.gov)
+- Website: [https://oscars.bnl.gov](https://oscars.bnl.gov)
+- GitHub: [https://github.com/dhidas/OSCARS](https://github.com/dhidas/OSCARS)
 
 
 
