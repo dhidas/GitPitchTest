@@ -225,6 +225,7 @@ obl.return_all = False
 
 ```python
 obl.read_file_lut1d('/Users/dhidas/OSCARSDATA/Facilities/NSLSII/SST/U42/bfield/planar/lut1d.txt')
+obl.name = 'MYBL UF42'
 obl.get_gaps(show=True)
 ```
 
