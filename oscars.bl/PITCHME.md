@@ -116,6 +116,17 @@ oscars.plots_mpl.plot_spectrum(s, title='Hello', figsize=[12, 2], color='r', yla
 ---
 
 ### Calculate Single and Multi-Particle spectra
+- Zoom in on a harmonic, calculate the single and multi-particle spectra
+- Setting show=False for each so we do not see the individual plots
+```python
+s_se = obl.spectrum(energy_range_eV=[2400, 2600], show=False)
+s_me = obl.spectrum(energy_range_eV=[2400, 2600], show=False, nparticles=500)
+```
+- Plot them togetner for comparison
+```python
+obl.plot_spectra(spectra=[s_se, s_me], label=['single-electron', 'multi-electron'])
+```
+---?image=assets/image/oscars.bl.spectra.png&size=auto 40%
 
 ![spectra](assets/image/oscars.bl.spectra.png)
 
