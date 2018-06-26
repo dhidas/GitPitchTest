@@ -84,7 +84,7 @@ harmonics = obl.get_gaps(energy_eV=2500, show=True, ofile='oscars.bl.get_gaps.pd
 obl.set_gap(gap=harmonics[0][1])
 ```
 
-![get_gaps](assets/image/oscars.bl.get_gaps.pdf)
+![](assets/image/oscars.bl.get_gaps.pdf)
 
 ---
 
@@ -94,7 +94,7 @@ obl.set_gap(gap=harmonics[0][1])
 s = obl.spectrum()
 ```
 
-![get_gaps](assets/image/oscars.bl.spectrum.pdf=50x)
+![](assets/image/oscars.bl.spectrum.pdf =450x)
 
 - For any other gap, simply
 ```python
@@ -106,7 +106,7 @@ s = obl.spectrum(gap=18.512)
 oscars.plots_mpl.plot_spectrum(s, title='Hello', figsize=[6, 1], color='r')
 ```
 
-![get_gaps](assets/image/oscars.bl.spectrum_more.pdf)
+![](assets/image/oscars.bl.spectrum_more.pdf)
 
 ---
 
