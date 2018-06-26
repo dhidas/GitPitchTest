@@ -89,18 +89,15 @@ obl.set_gap(gap=harmonics[0][1])
 ---
 
 ### Get Spectrum
-- Easy to plot and save spectra.  Example of single-electron spectrum
+- Easy to plot and save spectra.  Example of single-electron spectrum.  Any of the following will work
 ```python
 s = obl.spectrum()
+s = obl.spectrum(gap=20.412)
+s = obl.spectrum(fofile='oscars.bl.spectrum.pdf')
 ```
 
-![](assets/image/oscars.bl.spectrum.pdf =450x)
+![](assets/image/oscars.bl.spectrum.pdf)
 
-- For any other gap, simply
-```python
-s = obl.spectrum(gap=18.512)
-```
-- s is the spectrum as a python list
 - For more plotting options use the full version
 ```python
 oscars.plots_mpl.plot_spectrum(s, title='Hello', figsize=[6, 1], color='r')
