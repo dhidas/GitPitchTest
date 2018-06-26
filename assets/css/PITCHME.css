@@ -3,6 +3,12 @@
   box-shadow: none;
 }
 
+.reveal section blockquote {
+  border: 0;
+  box-shadow: none;
+  background-color : #000000
+}
+
 .reveal .slides {
     font-size: 18pt;
 }

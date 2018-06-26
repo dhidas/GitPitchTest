@@ -6,19 +6,22 @@ An OSCARS Beamline Tutorial
 
 ### What is oscars.bl
 
-- ID Lookup Tables
-  - Pre-computed and user LUTs
-- Plotting spectra, flux, power density
+- ID Lookup Tables: Pre-computed and user defined LUTs
+- Easily plotting simple spectra, flux, power density
 - Access to magnetic field data
+- Access to all of OSCARS functionality
 
 ---
 
 ### Setup oscars.bl
-- Import, create bl object, and setup your beamline
+- Import the oscars.bl module.  With no beamline given it will print available options
+- Choose your nthreads and gpu options
+
 ```python
 import oscars.bl
 obl = oscars.bl.bl(nthreads=10, gpu=1)
 ```
+
 
 ```
 You can select from the available facility, beamline, and device list:
@@ -34,17 +37,19 @@ NSLSII
     SRX          IVU21            planar
     NYX          IVU18            planar
 ```
-
+If using a non-standard data directory:
+```python
+obl = oscars.bl.bl(base_path='/Users/dhidas/OSCARSDATA', nthreads=10, gpu=1)
+```
 ---
 
 ### Setup beamline
-- Select facility, beamline, device
+- Select facility, beamline, device when creating the oscars.bl object
 
 ```python
-obl = oscars.bl.bl(facility='NSLSII', beamline='FMX', device='IVU21', nthreads=10, gpu=1)
+obl = oscars.bl.bl(facility='NSLSII', beamline='SST', device='U42', nthreads=10, gpu=1)
 ```
 - Get a summary
-
 ```python
 obl.summary()
 ```
@@ -70,8 +75,9 @@ obl.get_gaps(energy_eV=2500)
 ---
 
 ### Show Plot and set Gap
-- Use the 'show' argument
-- Set gap based on result
+- Use the 'show' argument too produce a nice plot
+- Can save plots
+- Set the gap based on result with highest flux (list is ordered)
 
 ```python
 harmonics = obl.get_gaps(energy_eV=2500, show=True, ofile='oscars.bl.get_gaps.pdf')
@@ -79,6 +85,41 @@ obl.set_gap(gap=harmonics[0][1])
 ```
 
 ![get_gaps](assets/image/oscars.bl.get_gaps.pdf)
+
+---
+
+### Get Spectrum
+- Easy to plot and save spectra.  Example of single-electron spectrum
+```python
+s = obl.spectrum(fofile='oscars.sr.spectrum.pdf')
+```
+- fofile is not needed, but used if you want to save the plot
+- For any other gap, simply
+```python
+s = obl.spectrum(gap=18.512)
+```
+- s is the spectrum as a python list
+
+![get_gaps](assets/image/oscars.bl.spectrum.pdf)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
