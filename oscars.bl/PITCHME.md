@@ -94,7 +94,7 @@ obl.set_gap(gap=harmonics[0][1])
 s = obl.spectrum()
 ```
 
-![get_gaps](assets/image/oscars.bl.spectrum.pdf   =50x)
+![get_gaps](assets/image/oscars.bl.spectrum.pdf=50x)
 
 - For any other gap, simply
 ```python
