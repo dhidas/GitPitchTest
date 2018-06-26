@@ -105,7 +105,7 @@ s = obl.spectrum(fofile='oscars.bl.spectrum.pdf')
 ### More plotting options
 - For any oscars.bl plot more plotting options use the full version, for example
 ```python
-oscars.plots_mpl.plot_spectrum(s, title='Hello', figsize=[6, 1], color='r', ylabel='Intensity [a.u.]')
+oscars.plots_mpl.plot_spectrum(s, title='Hello', figsize=[12, 2], color='r', ylabel='Intensity [a.u.]')
 ```
 
 ![](assets/image/oscars.bl.spectrum_more.pdf)
