@@ -229,6 +229,9 @@ obl.name = 'MYBL UF42'
 obl.get_gaps(show=True)
 ```
 
+- List harmonics
+- Each row is then: energy gap flux
+
 ![](assets/image/oscars.bl.example.lut1d.pdf)
 
 
