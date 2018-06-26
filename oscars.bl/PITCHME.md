@@ -103,7 +103,7 @@ s = obl.spectrum(fofile='oscars.bl.spectrum.pdf')
 ---
 
 ### More plotting options
-- For any oscars.bl plot more plotting options use the full version, for example
+- For any oscars.bl plot more plotting options exist in the full version, for example
 
 ```python
 oscars.plots_mpl.plot_spectrum(s, title='Hello', figsize=[12, 2], color='r', ylabel='Intensity [a.u.]')
@@ -249,3 +249,36 @@ harmonic 3
 2409.0 20.0 237708903371776.0
 5033.1 33.0  17420581029248.0
 ```
+
+
+---
+### Saving Calculation Data
+- For any calculation you can save the raw data in text format by simply adding the 'ofile' argument
+
+```python
+obl.spectrum(energy_range_eV=[2400, 2600], ofile='oscars.bl.spectrum.txt')
+```
+- Which gives in text format
+```
+2.400000e+03 1.155150e+12
+2.401000e+03 1.318041e+12
+2.402000e+03 1.445257e+12
+2.403000e+03 1.525704e+12
+2.404000e+03 1.551536e+12
+2.405000e+03 1.519291e+12
+2.406000e+03 1.429881e+12
+2.407000e+03 1.289482e+12
+2.408000e+03 1.108632e+12
+2.409000e+03 9.024489e+11
+2.410000e+03 6.889639e+11
+2.411000e+03 4.885630e+11
+...
+```
+
+---
+### Comments or Suggestion
+- Please email us at [oscars@bnl.gov](mailto:oscars@bnl.gov)
+
+- And visit [https://oscars.bnl.gov](https://oscars.bnl.gov)
+
+Thank you for stopping by!
