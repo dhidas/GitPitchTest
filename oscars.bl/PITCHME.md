@@ -2,8 +2,15 @@
 
 An OSCARS Beamline Tutorial
 
----
+Website: [https://oscars.bnl.gov](https://oscars.bnl.gov)
+GitHub: [https://github.com/dhidas/OSCARS](https://github.com/dhidas/OSCARS)
+Email: [oscars@bnl.gov](mailto:oscars@bnl.gov)
 
+
+
+
+
+---
 ### What is oscars.bl
 
 - ID Lookup Tables: Pre-computed and user defined LUTs
@@ -11,8 +18,11 @@ An OSCARS Beamline Tutorial
 - Access to magnetic field data
 - Access to all of OSCARS functionality
 
----
 
+
+
+
+---
 ### Setup oscars.bl
 - Import the oscars.bl module.  With no beamline given it will print available options
 - Choose your nthreads and gpu options
@@ -41,8 +51,12 @@ If using a non-standard data directory:
 ```python
 obl = oscars.bl.bl(base_path='/Users/dhidas/OSCARSDATA', nthreads=10, gpu=1)
 ```
----
 
+
+
+
+
+---
 ### Setup beamline
 - Select facility, beamline, device when creating the oscars.bl object
 
@@ -56,8 +70,11 @@ obl.summary()
 
 ![Summary](assets/image/oscars.bl.summary.pdf)
 
----
 
+
+
+
+---
 ### Find Gaps for Given Energy
 - Get gaps for desired energy
 
@@ -72,8 +89,11 @@ obl.get_gaps(energy_eV=2500)
 ```
 - Each element is [harmonic, gap, flux]
 
----
 
+
+
+
+---
 ### Show Plot and set Gap
 - Use the 'show' argument too produce a nice plot
 - Can save plots
@@ -86,8 +106,11 @@ obl.set_gap(gap=harmonics[0][1])
 
 ![](assets/image/oscars.bl.get_gaps.pdf)
 
----
 
+
+
+
+---
 ### Get Spectrum
 - Easy to plot and save spectra.  Example of single-electron spectrum.  Any of the following will work
 ```python
@@ -100,8 +123,11 @@ s = obl.spectrum(fofile='oscars.bl.spectrum.pdf')
 
 - s is the spectrum as a python list
 
----
 
+
+
+
+---
 ### More plotting options
 - For any oscars.bl plot more plotting options exist in the full version, for example
 
@@ -113,8 +139,11 @@ oscars.plots_mpl.plot_spectrum(s, title='Hello', figsize=[12, 2], color='r', yla
 
 - see documentation for [oscars.plots_mpl](https://oscars.bnl.gov/doc/latest/Modules.html#oscars-plots-mpl)
 
----
 
+
+
+
+---
 ### Calculate Single and Multi-Particle spectra
 - Zoom in on a harmonic, calculate the single and multi-particle spectra
 ```python
@@ -128,6 +157,10 @@ obl.plot_spectra(spectra=[s_se, s_me], label=['single-electron', 'multi-electron
 
 ![](assets/image/oscars.bl.spectra.pdf)
 
+
+
+
+
 ---
 ### Calculate Flux
 - Calculate the single particle flux and save to file
@@ -137,6 +170,7 @@ f_se = obl.flux(energy_eV=2500, fofile='oscars.bl.flux_se.pdf')
 ```
 
 ![](assets/image/oscars.bl.flux_se.pdf)
+
 
 
 
@@ -152,6 +186,8 @@ f_me = obl.flux(energy_eV=2500, nparticles=3, fofile='oscars.bl.flux_me.pdf')
 ![](assets/image/oscars.bl.flux_me.pdf)
 
 - You should use more particles.  These calculations can be time consuming.
+
+
 
 
 
@@ -174,6 +210,7 @@ Total Power 862.3209364892316 [W/mm^2]
 
 
 
+
 ---
 ### Power Density
 - Each beamline is setup with defaults, but everything is configurable, for instance changing width and resolution
@@ -185,6 +222,9 @@ pd = obl.power_density(width=[0.05, 0.05], npoints=[101, 201], fofile='oscars.bl
 ![](assets/image/oscars.bl.power_density_width.pdf)
 
 - Details of the calculations are in [oscars.sr](https://oscars.bnl.gov/doc/latest/Modules.html#oscars-sr)
+
+
+
 
 
 ---
@@ -207,6 +247,10 @@ beam
 ...
 ```
 
+
+
+
+
 ---
 ### Showing Plots and Return Objects
 - If you don't want to 'show' the plots
@@ -219,6 +263,9 @@ obl.return_all = False
 ```
 
 
+
+
+
 ---
 ### Importing a User LUT
 - Import your own LUT (example structure next page)
@@ -229,14 +276,16 @@ obl.name = 'MYBL UF42'
 obl.get_gaps(show=True)
 ```
 
-- List harmonics
-- Each row is then: energy gap flux
-
 ![](assets/image/oscars.bl.example.lut1d.pdf)
+
+
+
 
 
 ---
 ### Example LUT 1D
+- List harmonics
+- Each row is then: energy gap flux
 
 ```
 harmonic 1
@@ -253,6 +302,9 @@ harmonic 3
 2409.0 20.0 237708903371776.0
 5033.1 33.0  17420581029248.0
 ```
+
+
+
 
 
 ---
@@ -278,6 +330,10 @@ obl.spectrum(energy_range_eV=[2400, 2600], ofile='oscars.bl.spectrum.txt')
 2.411000e+03 4.885630e+11
 ...
 ```
+
+
+
+
 
 ---
 ### Comments or Suggestion
