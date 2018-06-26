@@ -39,10 +39,12 @@ NSLSII
 
 ### Setup beamline
 - Select facility, beamline, device
+
 ```python
 obl = oscars.bl.bl(facility='NSLSII', beamline='FMX', device='IVU21', nthreads=10, gpu=1)
 ```
 - Get a summary
+
 ```python
 obl.summary()
 ```
@@ -53,9 +55,11 @@ obl.summary()
 
 ### Find Gaps for Given Energy
 - Get gaps for desired energy
+
 ```python
 obl.get_gaps(energy_eV=2500)
 ```
+
 ```
 [[3, 20.41260062528832, 232409062443786.88],
  [5, 15.3509438307999, 200487396194740.56],
@@ -68,6 +72,7 @@ obl.get_gaps(energy_eV=2500)
 ### Show Plot and set Gap
 - Use the 'show' argument
 - Set gap based on result
+
 ```python
 harmonics = obl.get_gaps(energy_eV=2500, show=True, ofile='oscars.bl.get_gaps.pdf')
 obl.set_gap(gap=harmonics[0][1])
