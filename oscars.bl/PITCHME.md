@@ -127,7 +127,7 @@ s_me = obl.spectrum(energy_range_eV=[2400, 2600], show=False, nparticles=500)
 obl.plot_spectra(spectra=[s_se, s_me], label=['single-electron', 'multi-electron'])
 ```
 
-![](assets/image/oscars.bl.spectra.pdf)
+![](assets/image/oscars.bl.spectra.png)
 
 
 
