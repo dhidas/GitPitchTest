@@ -117,7 +117,6 @@ oscars.plots_mpl.plot_spectrum(s, title='Hello', figsize=[12, 2], color='r', yla
 
 ### Calculate Single and Multi-Particle spectra
 - Zoom in on a harmonic, calculate the single and multi-particle spectra
-- Setting show=False for each so we do not see the individual plots
 ```python
 s_se = obl.spectrum(energy_range_eV=[2400, 2600], show=False)
 s_me = obl.spectrum(energy_range_eV=[2400, 2600], show=False, nparticles=500)
@@ -127,41 +126,126 @@ s_me = obl.spectrum(energy_range_eV=[2400, 2600], show=False, nparticles=500)
 obl.plot_spectra(spectra=[s_se, s_me], label=['single-electron', 'multi-electron'])
 ```
 
-![spectra](assets/image/oscars.bl.spectra.pdf&size=auto 40%)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](assets/image/oscars.bl.spectra.pdf)
 
 ---
-
-![Flux Explained](assets/image/Test_EPU60_400eV.pdf)
-
----
-
+### Calculate Flux
+- Calculate the single particle flux and save to file
 
 ```python
-s = "Python syntax highlighting"
-print s
+f_se = obl.flux(energy_eV=2500, fofile='oscars.bl.flux_se.pdf')
+```
+
+![](assets/image/oscars.bl.flux_se.pdf)
+
+
+
+
+---
+### Calculate Flux - Multi-Particle
+- Need only to add 'nparticles' argument
+
+```python
+f_me = obl.flux(energy_eV=2500, nparticles=3, fofile='oscars.bl.flux_me.pdf')
+```
+
+![](assets/image/oscars.bl.flux_me.pdf)
+
+- You should use more particles.  These calculations can be time consuming.
+
+
+
+---
+### Power Density
+- Calculate the poewr density on a plane
+- Most beamlines will not need multi-particle simulation for this
+
+```python
+pd = obl.power_density(fofile='oscars.bl.power_density.pdf')
+print('Total Power', obl.total_power(), '[W/mm^2]')
+```
+
+![](assets/image/oscars.bl.power_density.pdf)
+
+```
+Total Power 862.3209364892316 [W/mm^2]
+```
+
+
+
+
+---
+### Power Density
+- Each beamline is setup with defaults, but everything is configurable, for instance changing width and resolution
+
+```python
+pd = obl.power_density(width=[0.05, 0.05], npoints=[101, 201], fofile='oscars.bl.power_density_width.pdf')
+```
+
+![](assets/image/oscars.bl.power_density_width.pdf)
+
+- Details of the calculations are in [oscars.sr](https://oscars.bnl.gov/doc/latest/Modules.html#oscars-sr)
+
+
+---
+### Configuration
+- Default configuration is stored within the file tree at self.base_path in config.ini files
+- All default configuration can be overridden by user input
+- Can print current cinfiguration
+
+```python
+obl.info()
+```
+```
+***BEGIN CONFIG***
+beam
+  type electron
+  current 0.500
+  energy_gev 3
+  sigma_energy_gev 0.00267
+  emittance 0.9e-9 0.008e-9
+...
+```
+
+---
+### Showing Plots and Return Objects
+- If you don't want to 'show' the plots
+```python
+obl.show_all = False
+```
+- If you don't want return objects
+```python
+obl.return_all = False
 ```
 
 
 ---
+### Importing a User LUT
+- Import your own LUT (example structure next page)
 
 ```python
-for i in range(10):
-    print('bite me')
+obl.read_file_lut1d('/Users/dhidas/OSCARSDATA/Facilities/NSLSII/SST/U42/bfield/planar/lut1d.txt')
+obl.get_gaps(show=True)
+```
 
-osr = oscars.sr.sr(gpu=1, nthreads=10)
-osr.add_bfield(123)
+![](assets/image/oscars.bl.example.lut1d.pdf)
+
+
+---
+### Example LUT 1D
+
+```
+harmonic 1
+ 313.3 11.5 175950363894016.0
+ 402.0 13.5 215719549781888.0
+ 764.9 19.5 327973629641984.0
+1574.0 31.0 263515296448896.0
+2008.3 55.0  10694510247968.0
+
+harmonic 3
+ 941.4 11.5 212151858914304.0
+1440.8 15.0 257096550147072.0
+1890.4 17.5 262521650105344.0
+2409.0 20.0 237708903371776.0
+5033.1 33.0  17420581029248.0
 ```
