@@ -45,7 +45,7 @@ obl = oscars.bl.bl(facility='NSLSII', beamline='FMX', device='IVU21', nthreads=1
 obl.summary()
 ```
 
----?image=path/to/image.file&position=center&border=0
+---?image=(assets/image/Test_EPU60_400eV.pdf&position=center&border=0
 
 ---
 
