@@ -194,12 +194,12 @@ f_me = obl.flux(energy_eV=2500, nparticles=3, fofile='oscars.bl.flux_me.pdf')
 
 ---
 ### Power Density
-- Calculate the poewr density on a plane
+- Calculate the power density on a plane
 - Most beamlines will not need multi-particle simulation for this
 
 ```python
 pd = obl.power_density(fofile='oscars.bl.power_density.pdf')
-print('Total Power', obl.total_power(), '[W/mm^2]')
+print('Total Power', obl.total_power(), '[W]')
 ```
 
 ![](assets/image/oscars.bl.power_density.pdf)
